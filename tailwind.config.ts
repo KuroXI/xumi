@@ -1,14 +1,16 @@
-import { type Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+import type { Config } from "tailwindcss";
+import TailwindAnimate from "tailwindcss-animate";
+import ShadCN from "@/lib/shadcn";
 
-export default {
-  content: ["./src/**/*.tsx"],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
-    },
-  },
-  plugins: [],
+const config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  plugins: [TailwindAnimate, ShadCN],
 } satisfies Config;
+
+export default config;
