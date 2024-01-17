@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import TailwindAnimate from "tailwindcss-animate";
-import ShadCN from "@/lib/shadcn";
+import ShadCN from "./src/lib/shadcn";
 
 const config = {
   darkMode: ["class"],
